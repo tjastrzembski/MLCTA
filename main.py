@@ -2,14 +2,8 @@
 
 # to establish connection to zope instance
 # and get physical path for acquisition
-# from http.client import HTTPResponse
-# from urllib.parse import urlencode
-# from urllib.error import HTTPError, URLError
-# from urllib.request import Request, urlopen
-
 from io import BytesIO  # for fast response storage
 import pycurl
-
 
 from os import walk, path, listdir
 import re
@@ -18,7 +12,6 @@ from perfact import dbconn
 
 # own Files
 from FileParser.FileParserFactory import FileParserFactory 
-
 
 # For HTTP Requests regarding physical path
 zope_url = 'http://localhost:9081'
@@ -39,74 +32,6 @@ supported_types = [
     'DTML Document',
     'Page Template(text/html)',
     'Page Template(text/xml)'
-
-    # If new types are acquired: here is the list
-    # To clarify, which of those are required
-    # 'Virtual Host Monster'
-    # 'Simple User Folder',
-    # 'Site Error Log',
-    # 'Browser Id Manager',
-    # 'Session Data Manager',
-    # 'User Folder',
-    # 'External Method',
-    # 'Temporary Folder',
-    # 'RAM Cache Manager',
-    # 'ZSyncer',
-    # 'Folder (Ordered)',
-    # 'WebExtFile',
-    # 'Accelerated HTTP Cache Manager',
-    # 'Image',
-    # 'Folder',
-    # 'Control Panel',
-    # 'Mail Host',
-    # 'Z Psycopg 2 Database Connection',
-    # 'File(application/font-woff)',
-    # 'File(application/javascript)',
-    # 'File(application/json)',
-    # 'File(application/octet-stream)',
-    # 'File(application/pdf)',
-    # 'File(application/sql)',
-    # 'File(application/vnd.ms-excel)',
-    # 'File(application/vnd.ms-fontobject)',
-    # 'File(application/vnd.oasis.opendocument.text)',
-    # 'File(application/x-compressed-tar)',
-    # 'File(application/x-dia-diagram)',
-    # 'File(application/x-executable)',
-    # 'File(application/x-font-ttf)',
-    # 'File(application/x-font-woff)',
-    # 'File(application/x-httpd-php)',
-    # 'File(application/x-javascript)',
-    # 'File(application/x-ms-dos-executable)',
-    # 'File(application/x-msdos-program)',
-    # 'File(application/x-msi)',
-    # 'File(application/x-shockwave-flash)',
-    # 'File(application/x-x509-ca-cert)',
-    # 'File(application/xml)',
-    # 'File(audio/mp4)',
-    # 'File(audio/x-wav)',
-    # 'File(font/opentype)',
-    # 'File(font/truetype)',
-    # 'File(font/ttf)',
-    # 'File(image/bmp)',
-    # 'File(image/gif)',
-    # 'File(image/jpeg)',
-    # 'File(image/png)',
-    # 'File(image/svg+xml)',
-    # 'File(text)',
-    # 'File(text/markdown)',
-    # 'File(text/plain)',
-    # 'File(text/x-ms-regedit)',
-    # 'File(text/x-python)',
-    # 'File(text/x-sh)',
-    # 'File(text/x-unknown-content-type)',
-    # 'File(text/xml)',
-    # 'File(video/mp4)',
-    # 'Image(image/bmp)',
-    # 'Image(image/gif)',
-    # 'Image(image/jpeg)',
-    # 'Image(image/png)',
-    # 'Image(image/svg+xml)',
-    # 'Image(image/x-icon)',
 ]
 # extract class from perfact-assignd
 class ResponseWriter:
@@ -171,8 +96,9 @@ def parse_file(
         interpretation_type=interpretation_type
     )
     if not file_parser_class:
-        #print(f'Skip this shit. {file_path} as {interpretation_type} is a lie.')
         return 0 , set()
+
+
     file_parser = file_parser_class(
         file_path=file_path
     )
@@ -389,24 +315,6 @@ def repo_check(
     callingtree_cleanup()       
     cust_dbconn.commit()
 
-# def check_zope_connection() -> HTTPResponse:
-#     result = None
-#     try:
-#         response = urlopen(zope_url)
-#         result = {
-#             'status': response.status,
-#             'msg': response.reason
-#         }
-#         response.read()
-
-#     except HTTPError as err:
-#         result = {
-#             'status': err.code,
-#             'msg': err.reason
-#         }
-
-#     return result
-
 def  get_real_physical_path(acquisition_path) -> tuple:
         '''
         Gets physical path in Zope environment using libcurl.
@@ -448,41 +356,6 @@ def  get_real_physical_path(acquisition_path) -> tuple:
 
         result = path, file_name
         return result
-
-
-def main() -> None:
-    # Make GraphDict
-    # Make ParseQueue
-    # Initialize minimal Zope instance or use existing one using web service
-    
-    #repo_check('./TestMask') #  input graphdict, ParseQueue
-    
-    # First check connection
-    connection_res = check_zope_connection()
-    if connection_res['status'] > 400:
-        print('{} {}'.format(
-            connection_res['status'],
-            connection_res['msg']
-        ))
-    
-        exit()
-    
-    #acquisition_path = 'PerFact/DB_Utils/zLayout/zDB/zI18N/zMod/WebApp/index_html'
-    #response = get_real_physical_path(acquisition_path)
-    #print(response)
-
-    start_time = time()
-    repo_check()
-    end_time = time() - start_time
-    print(f'Elapsed Time: {end_time} sec')
-    while len(connect_queue.queue) > 0:
-        connect_queue.connect_node()
-
-    for key, node in graph_dict.items():
-        print('Path: {}; Connect To: ({})'.format(
-            key,
-            ', '.join([f'{n.phyiscal_path}/{n.function_name}' for n in node.children])
-        ))
 
 
 def exec_query(queryfile, **kwargs):
