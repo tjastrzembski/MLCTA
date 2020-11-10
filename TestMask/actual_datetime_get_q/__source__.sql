@@ -1,0 +1,1 @@
+select now() as actual_datetime
