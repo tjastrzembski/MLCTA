@@ -45,6 +45,7 @@ tag_attr
 tag_attr_key
     : ATTR_DEFINE
     | ATTR_CONDITION
+    | ATTR_CONTENT
     | ATTR_DEFINE_MACRO
     | ATTR_USE_MACRO
     | identifier

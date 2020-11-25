@@ -2,12 +2,14 @@ select
   callingtree_id as id,
   callingtree_path as path,
   callingtree_filename as filename,
-  (select 
-    callingtreetype_desc 
-   from callingtreetype  
-   where callingtreetype_id = callingtree_callingtreetype_id) as itype,
-  callingtree_filemodded as modtime 
+  callingtreetype_desc as itype,
+  callingtree_filemodded as modtime
 
 from callingtree
-where callingtree_fileparsed is null 
-  or callingtree_fileparsed != callingtree_filemodded;
+
+join callingtreetype
+  on callingtreetype_id = callingtree_callingtreetype_id
+  
+where callingtreetype_parseable is true
+  and ( callingtree_fileparsed is null 
+  or callingtree_fileparsed != callingtree_filemodded);

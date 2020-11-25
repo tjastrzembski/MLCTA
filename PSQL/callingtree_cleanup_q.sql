@@ -1,2 +1,3 @@
 delete from callingtree 
-where callingtree_scanned = false;
+where  callingtree_path ~ %(path)s
+  and  callingtree_scanned = false;

@@ -18,11 +18,10 @@ class FunctionPathListener(TALParserListener):
     def enterFunction_ref(self, ctx):
         path_str = ''.join([
             t.getText() for t in ctx.getChildren()
-           ])
-
-        fct_name = re.findall(r'(?:\.)?([^\"\(]+)(?:\()?', path_str)
-        if len(fct_name) > 1:
-            fmt_fct_name = fct_name[0].replace('.','/')
+           ]) 
+        fct_name = re.findall(r'(?:[\.\/])?([^\"\(]+)(?:\()?', path_str)
+        for entry in fct_name:
+            fmt_fct_name = entry.replace('.','/')
             self.parsed_fct.add(fmt_fct_name)
     
     def get_fctname_list(self) -> set:

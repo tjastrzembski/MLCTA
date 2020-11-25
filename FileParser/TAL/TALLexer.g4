@@ -18,7 +18,7 @@ STRING_KEY           : 'string:';
 NOTHING_EXPR         : '|nothing';
 ZOPE_KEY             : 'context';
 
-
+ATTR_CONTENT        : 'content=';
 ATTR_DEFINE         : 'define=';
 ATTR_CONDITION      : 'condition=';
 ATTR_DEFINE_MACRO   : 'define-macro=';
