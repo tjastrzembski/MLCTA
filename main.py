@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 from time import time
-from perfact import dbconn
 
 # own Files
+from PostgreSQLQueryHandle import PostgreSQLQueryHandle
 from GraphNodeClassifier import GraphNodeClassifier
 from GraphNodeParser import GraphNodeParser
 from GraphNodeConnector import GraphNodeConnector
@@ -10,38 +10,15 @@ from GraphNodeConnector import GraphNodeConnector
 # For HTTP Requests regarding physical path
 zope_url = 'http://localhost:9081'
 global_acquisition = 'PerFact/DB_Utils/zLayout/zDB/zI18N/zMod/'
-cust_dbconn =  dbconn.DBConn("user=postgres dbname=perfactema")
+dbconn_args = "user=postgres dbname=perfactema"
 zope_repo_path = '/opt/perfact/dbutils-zoperepo/__root__/'
 zope_sub_path  = 'PerFact/WebApp/TestMask'
 netrc_file = '/root/.netrc-callingtree'
 
-class PostgreSQLQueryHandle:
-    def __init__(
-        self, 
-        dbconn
-        ):
-        self.dbconn = dbconn
-
-    def exec_query(
-        self, 
-        queryfile, 
-        **kwargs
-        ):
-        with open(queryfile, 'r') as file:
-            query = file.read()
-        self.dbconn.execute(
-            query,
-            **kwargs
-        )
-        return self.dbconn.dictionaries()
-
-    def commit_changes(self):
-        self.dbconn.commit()
-
 if __name__ == '__main__':
 
     psql = PostgreSQLQueryHandle(
-        dbconn=cust_dbconn
+        dbconn_args=dbconn_args
     )
 
     start_time = time()
