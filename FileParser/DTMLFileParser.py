@@ -20,7 +20,8 @@ class FunctionPathListener(DTMLParserListener):
             expr_statement = t.getText()
             fct_name = re.findall(r'([^\"\(]+)\(', expr_statement)
             for entry in fct_name:
-                self.parsed_fct.add(entry)
+                fmt_fct_name = entry.replace('.','/')
+                self.parsed_fct.add(fmt_fct_name)
     
     def enterDtml_tag_var(self, ctx):    
         for t in ctx.getChildren():

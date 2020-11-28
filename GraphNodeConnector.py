@@ -110,7 +110,7 @@ class GraphNodeConnector:
             )
             real_physical_path, filename = self.get_real_physical_path(
                 full_acquisition
-                )
+            )
             child_node_res = self.psql.exec_query(
                     './PSQL/callingtree_get_q2.sql',
                     path=real_physical_path,
@@ -167,29 +167,39 @@ class GraphNodeConnector:
         Gets physical path in Zope environment using libcurl.
         '''
         url = f'{self.zope_url}/{acquisition_path}/absolute_url_path'
+
+        #replace hashtags which leads to crash 
+        url = url.replace('#','')
         respwriter = ResponseWriter()
 
-        curl = pycurl.Curl()
-        curl.setopt(curl.URL, url)
-        curl.setopt(curl.CONNECTTIMEOUT, 20)
-        curl.setopt(curl.FOLLOWLOCATION, True)
-        curl.setopt(curl.HEADERFUNCTION, respwriter.headerfunc)
-        curl.setopt(curl.NOSIGNAL, True)
-        curl.setopt(curl.NOPROGRESS, True)
-        curl.setopt(curl.SERVICE_NAME, 'callingtree')
-        curl.setopt(curl.NETRC, 1)
-        curl.setopt(curl.NETRC_FILE, self.netrc_file)
-        curl.setopt(curl.HTTPAUTH, curl.HTTPAUTH_BASIC)
-        curl.setopt(curl.UNRESTRICTED_AUTH, True)
-        curl.setopt(curl.WRITEFUNCTION, respwriter.bodyfunc)
-        curl.setopt(curl.SSL_VERIFYPEER, False)
-        curl.setopt(curl.SSL_VERIFYHOST, False)
+        try:
+            curl = pycurl.Curl()
+            curl.setopt(curl.URL, url)
+            curl.setopt(curl.CONNECTTIMEOUT, 5)
+            curl.setopt(curl.TIMEOUT, 5)
+            curl.setopt(curl.FOLLOWLOCATION, True)
+            curl.setopt(curl.HEADERFUNCTION, respwriter.headerfunc)
+            curl.setopt(curl.NOSIGNAL, True)
+            curl.setopt(curl.NOPROGRESS, True)
+            curl.setopt(curl.SERVICE_NAME, 'callingtree')
+            curl.setopt(curl.NETRC, 1)
+            curl.setopt(curl.NETRC_FILE, self.netrc_file)
+            curl.setopt(curl.HTTPAUTH, curl.HTTPAUTH_BASIC)
+            curl.setopt(curl.UNRESTRICTED_AUTH, True)
+            curl.setopt(curl.WRITEFUNCTION, respwriter.bodyfunc)
+            curl.setopt(curl.SSL_VERIFYPEER, False)
+            curl.setopt(curl.SSL_VERIFYHOST, False)
+        except UnicodeEncodeError:
+            return None, None
 
-        curl.perform()
-        curl.close()
-        respwriter.flush()
-        error = respwriter.error
-       
+        try:
+            curl.perform()
+            curl.close()
+            respwriter.flush()
+            error = respwriter.error
+        except pycurl.error:
+            return None, None
+        
         response = respwriter.responses[0]
         if error or b'200 OK\r\n' not in response[0]:
             return None, None

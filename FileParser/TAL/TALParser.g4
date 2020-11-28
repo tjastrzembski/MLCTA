@@ -6,17 +6,11 @@ options { tokenVocab=TALLexer; }
 parse: stmt* EOF;
 
 stmt
-    : tag
-    ;
-
-tag
     : ( TAG_OPEN_SLASH close_tag | TAG_OPEN open_tag ) TAG_CLOSE 
     ;
 
-
 open_tag
-    : other_tag
-    | tal_tag
+    : other_tag| tal_tag
     ;
 
 close_tag
@@ -37,7 +31,6 @@ tag_specifier
     | METAL_TAG_KEY
     ;
 
-
 tag_attr
     : tag_attr_key tag_attr_value?
     ;
@@ -46,6 +39,7 @@ tag_attr_key
     : ATTR_DEFINE
     | ATTR_CONDITION
     | ATTR_CONTENT
+    | ATTR_REPEAT
     | ATTR_DEFINE_MACRO
     | ATTR_USE_MACRO
     | identifier

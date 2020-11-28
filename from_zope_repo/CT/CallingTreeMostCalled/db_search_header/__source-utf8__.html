@@ -1,0 +1,9 @@
+<tal:searchcount define="searchcount context/search_count_q">
+    <div class="num-entries">
+    <tal:loop repeat="item searchcount">
+        <tal:notfirstitem condition="not:repeat/item/start"> |
+        </tal:notfirstitem>
+        <tal:x content="item/caption|nothing"/>: <tal:x content="item/count"/>
+     </tal:loop>
+     </div>
+</tal:searchcount>

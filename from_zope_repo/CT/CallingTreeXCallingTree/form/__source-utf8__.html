@@ -1,0 +1,12 @@
+<div class="perfact-form--elem"
+     tal:define="dd python:here.db_inputdict('callingtreexcallingtree_acquisition')">
+   <metal:x use-macro="here/db_fields/macros/editinfo"/>
+</div>
+
+<tal:subform define="subform nocall:context/CallingtreeCaller">
+    <metal:x use-macro="context/db_fields/macros/subform"/>
+</tal:subform>
+
+<tal:subform define="subform nocall:context/CallingtreeCalled">
+    <metal:x use-macro="context/db_fields/macros/subform"/>
+</tal:subform>

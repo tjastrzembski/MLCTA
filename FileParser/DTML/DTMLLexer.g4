@@ -10,11 +10,11 @@ TAG_CLOSE           : '>';
 SLASH               : '/';
 
 DTML_TAG_KEY        : 'dtml-';
-DTML_TAG_EXPR       : 'expr=';
-DTML_TAG_TYPE       : 'type=';
 DTML_TAG_SPEC                
     : 'var' | 'sqlvar' | 'sqlgroup' | 'and' | 'if' | 'in' | 'sqltest' | 'let'
     ;
+
+EQ                  : '=';
 
 STRING_LITERAL  
     : DQUOTA_STRING

@@ -26,15 +26,6 @@ class TALParserListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by TALParser#tag.
-    def enterTag(self, ctx:TALParser.TagContext):
-        pass
-
-    # Exit a parse tree produced by TALParser#tag.
-    def exitTag(self, ctx:TALParser.TagContext):
-        pass
-
-
     # Enter a parse tree produced by TALParser#open_tag.
     def enterOpen_tag(self, ctx:TALParser.Open_tagContext):
         pass

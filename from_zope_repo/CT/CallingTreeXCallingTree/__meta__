@@ -1,0 +1,10 @@
+[
+    ('props', [
+        [('id', 'columns'), ('type', 'tokens'), ('value', ('parent_id', 'child_id', 'acquisition'))],
+        [('id', 'lc_controls'), ('type', 'boolean'), ('value', False)],
+        [('id', 'modinfo'), ('type', 'boolean'), ('value', False)],
+        [('id', 'table'), ('type', 'string'), ('value', 'callingtreexcallingtree')],
+        ]),
+    ('title', 'Zweige des Aufrufsbaums'),
+    ('type', 'Folder'),
+]

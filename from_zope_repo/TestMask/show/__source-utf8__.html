@@ -1,0 +1,55 @@
+<metal:page use-macro="context/layout/macros/std_page">
+    <metal:body fill-slot="body">   
+        <div>
+            <tal:x content="context/python_test"/>
+        </div> 
+        <div>
+            <tal:x content="container/A/python_test"/>  
+        </div>
+        <div>
+            <tal:x content="container/B/python_test"/>  
+        </div>
+        <div>
+            <h1>TAL test 'content' methods </h1>
+            <div>1:  <tal:x content="context/TAL/method_content"/></div>
+            <div>2:  <span tal:content="context/TAL/method_content_span"/></div>
+            <div>3:  <tal:x content="python:context.TAL.method_python_content()"/></div>
+            <div>4:  <span tal:content="python:context.TAL.method_python_content_span()"/></div>
+            <div>5:  <tal:x content="not: context/TAL/method_content_not"/></div>
+            <div>6:  <tal:x content="not: python: context.TAL.method_python_content_not()"/></div>
+            
+            <h1>TAL test 'define' methods </h1>
+
+            <div>
+                <tal:vars define="test context/TAL/method_define;
+                                  test2 python: context.TAL.method_python_define()">
+                    <div>1:  <tal:x content="test"/></div>
+                    <div>2:  <span tal:content="test2"/></div>
+                </tal:vars>
+                <div tal:define="test context/TAL/method_define_div;
+                                 test2 python: context.TAL.method_python_define_div">
+                    <div>3:  <tal:x content="test"/></div>
+                    <div>4:  <span tal:content="test2"/></div>
+                </div>
+            </div>
+            
+            <h1>TAL test 'condition' methods </h1>
+            <div>1: <tal:if condition="context/TAL/method_condition">DA</tal:if> </div>
+            <div>2: <span tal:condition="context/TAL/method_condition_span">DA</span></div>
+            <div>3: <tal:if condition="python:context.TAL.method_python_condition">DA</tal:if></div>
+            <div>4: <span tal:condition="python:context.TAL.method_python_condition_span">DA</span></div>
+            
+             <h1>TAL test 'repeat' method </h1>
+            <tal:loop repeat=" entry context/TAL/method_repeat">
+                <tal:x content="entry"/>
+            </tal:loop>
+            
+            
+              <h1>TAL test 'generic' methods </h1>
+              <tal:vars define="test context/TAL">
+                    <tal:x content="test/method_content_generic"/>
+                </tal:vars>
+        </div>
+  
+    </metal:body>
+</metal:page>

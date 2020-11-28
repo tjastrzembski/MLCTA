@@ -11,51 +11,50 @@ else:
 
 def serializedATN():
     with StringIO() as buf:
-        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\27")
-        buf.write("\u0087\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
+        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\30")
+        buf.write("\u0084\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
         buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
-        buf.write("\t\16\4\17\t\17\4\20\t\20\3\2\7\2\"\n\2\f\2\16\2%\13\2")
-        buf.write("\3\2\3\2\3\3\3\3\3\4\3\4\3\4\3\4\5\4/\n\4\3\4\3\4\3\5")
-        buf.write("\3\5\5\5\65\n\5\3\6\5\68\n\6\3\6\3\6\3\7\3\7\3\7\7\7?")
-        buf.write("\n\7\f\7\16\7B\13\7\3\b\3\b\5\bF\n\b\3\b\7\bI\n\b\f\b")
-        buf.write("\16\bL\13\b\3\t\3\t\3\n\3\n\5\nR\n\n\3\13\3\13\3\13\3")
-        buf.write("\13\3\13\3\13\5\13Z\n\13\3\f\3\f\3\f\3\f\7\f`\n\f\f\f")
-        buf.write("\16\fc\13\f\3\f\5\ff\n\f\3\f\3\f\3\r\5\rk\n\r\3\r\5\r")
-        buf.write("n\n\r\3\r\3\r\5\rr\n\r\3\16\5\16u\n\16\3\16\3\16\3\16")
-        buf.write("\6\16z\n\16\r\16\16\16{\5\16~\n\16\3\17\6\17\u0081\n\17")
-        buf.write("\r\17\16\17\u0082\3\20\3\20\3\20\2\2\21\2\4\6\b\n\f\16")
-        buf.write("\20\22\24\26\30\32\34\36\2\5\3\2\b\t\3\2\13\f\3\2\26\27")
-        buf.write("\2\u008d\2#\3\2\2\2\4(\3\2\2\2\6.\3\2\2\2\b\64\3\2\2\2")
-        buf.write("\n\67\3\2\2\2\f;\3\2\2\2\16C\3\2\2\2\20M\3\2\2\2\22O\3")
-        buf.write("\2\2\2\24Y\3\2\2\2\26[\3\2\2\2\30j\3\2\2\2\32}\3\2\2\2")
-        buf.write("\34\u0080\3\2\2\2\36\u0084\3\2\2\2 \"\5\4\3\2! \3\2\2")
-        buf.write("\2\"%\3\2\2\2#!\3\2\2\2#$\3\2\2\2$&\3\2\2\2%#\3\2\2\2")
-        buf.write("&\'\7\2\2\3\'\3\3\2\2\2()\5\6\4\2)\5\3\2\2\2*+\7\5\2\2")
-        buf.write("+/\5\n\6\2,-\7\6\2\2-/\5\b\5\2.*\3\2\2\2.,\3\2\2\2/\60")
-        buf.write("\3\2\2\2\60\61\7\7\2\2\61\7\3\2\2\2\62\65\5\16\b\2\63")
-        buf.write("\65\5\f\7\2\64\62\3\2\2\2\64\63\3\2\2\2\65\t\3\2\2\2\66")
-        buf.write("8\5\20\t\2\67\66\3\2\2\2\678\3\2\2\289\3\2\2\29:\7\26")
-        buf.write("\2\2:\13\3\2\2\2;<\5\20\t\2<@\5\36\20\2=?\5\22\n\2>=\3")
-        buf.write("\2\2\2?B\3\2\2\2@>\3\2\2\2@A\3\2\2\2A\r\3\2\2\2B@\3\2")
-        buf.write("\2\2CJ\5\36\20\2DF\7\b\2\2ED\3\2\2\2EF\3\2\2\2FG\3\2\2")
-        buf.write("\2GI\5\22\n\2HE\3\2\2\2IL\3\2\2\2JH\3\2\2\2JK\3\2\2\2")
-        buf.write("K\17\3\2\2\2LJ\3\2\2\2MN\t\2\2\2N\21\3\2\2\2OQ\5\24\13")
-        buf.write("\2PR\5\26\f\2QP\3\2\2\2QR\3\2\2\2R\23\3\2\2\2SZ\7\20\2")
-        buf.write("\2TZ\7\21\2\2UZ\7\17\2\2VZ\7\22\2\2WZ\7\23\2\2XZ\5\36")
-        buf.write("\20\2YS\3\2\2\2YT\3\2\2\2YU\3\2\2\2YV\3\2\2\2YW\3\2\2")
-        buf.write("\2YX\3\2\2\2Z\25\3\2\2\2[\\\7\24\2\2\\a\5\30\r\2]^\7\25")
-        buf.write("\2\2^`\5\30\r\2_]\3\2\2\2`c\3\2\2\2a_\3\2\2\2ab\3\2\2")
-        buf.write("\2be\3\2\2\2ca\3\2\2\2df\7\25\2\2ed\3\2\2\2ef\3\2\2\2")
-        buf.write("fg\3\2\2\2gh\7\24\2\2h\27\3\2\2\2ik\5\36\20\2ji\3\2\2")
-        buf.write("\2jk\3\2\2\2km\3\2\2\2ln\7\n\2\2ml\3\2\2\2mn\3\2\2\2n")
-        buf.write("o\3\2\2\2oq\5\32\16\2pr\7\r\2\2qp\3\2\2\2qr\3\2\2\2r\31")
-        buf.write("\3\2\2\2su\t\3\2\2ts\3\2\2\2tu\3\2\2\2uv\3\2\2\2vw\7\16")
-        buf.write("\2\2w~\5\34\17\2xz\5\36\20\2yx\3\2\2\2z{\3\2\2\2{y\3\2")
-        buf.write("\2\2{|\3\2\2\2|~\3\2\2\2}t\3\2\2\2}y\3\2\2\2~\33\3\2\2")
-        buf.write("\2\177\u0081\5\36\20\2\u0080\177\3\2\2\2\u0081\u0082\3")
-        buf.write("\2\2\2\u0082\u0080\3\2\2\2\u0082\u0083\3\2\2\2\u0083\35")
-        buf.write("\3\2\2\2\u0084\u0085\t\4\2\2\u0085\37\3\2\2\2\24#.\64")
-        buf.write("\67@EJQYaejmqt{}\u0082")
+        buf.write("\t\16\4\17\t\17\3\2\7\2 \n\2\f\2\16\2#\13\2\3\2\3\2\3")
+        buf.write("\3\3\3\3\3\3\3\5\3+\n\3\3\3\3\3\3\4\3\4\5\4\61\n\4\3\5")
+        buf.write("\5\5\64\n\5\3\5\3\5\3\6\3\6\3\6\7\6;\n\6\f\6\16\6>\13")
+        buf.write("\6\3\7\3\7\5\7B\n\7\3\7\7\7E\n\7\f\7\16\7H\13\7\3\b\3")
+        buf.write("\b\3\t\3\t\5\tN\n\t\3\n\3\n\3\n\3\n\3\n\3\n\3\n\5\nW\n")
+        buf.write("\n\3\13\3\13\3\13\3\13\7\13]\n\13\f\13\16\13`\13\13\3")
+        buf.write("\13\5\13c\n\13\3\13\3\13\3\f\5\fh\n\f\3\f\5\fk\n\f\3\f")
+        buf.write("\3\f\5\fo\n\f\3\r\5\rr\n\r\3\r\3\r\3\r\6\rw\n\r\r\r\16")
+        buf.write("\rx\5\r{\n\r\3\16\6\16~\n\16\r\16\16\16\177\3\17\3\17")
+        buf.write("\3\17\2\2\20\2\4\6\b\n\f\16\20\22\24\26\30\32\34\2\5\3")
+        buf.write("\2\b\t\3\2\13\f\3\2\27\30\2\u008c\2!\3\2\2\2\4*\3\2\2")
+        buf.write("\2\6\60\3\2\2\2\b\63\3\2\2\2\n\67\3\2\2\2\f?\3\2\2\2\16")
+        buf.write("I\3\2\2\2\20K\3\2\2\2\22V\3\2\2\2\24X\3\2\2\2\26g\3\2")
+        buf.write("\2\2\30z\3\2\2\2\32}\3\2\2\2\34\u0081\3\2\2\2\36 \5\4")
+        buf.write("\3\2\37\36\3\2\2\2 #\3\2\2\2!\37\3\2\2\2!\"\3\2\2\2\"")
+        buf.write("$\3\2\2\2#!\3\2\2\2$%\7\2\2\3%\3\3\2\2\2&\'\7\5\2\2\'")
+        buf.write("+\5\b\5\2()\7\6\2\2)+\5\6\4\2*&\3\2\2\2*(\3\2\2\2+,\3")
+        buf.write("\2\2\2,-\7\7\2\2-\5\3\2\2\2.\61\5\f\7\2/\61\5\n\6\2\60")
+        buf.write(".\3\2\2\2\60/\3\2\2\2\61\7\3\2\2\2\62\64\5\16\b\2\63\62")
+        buf.write("\3\2\2\2\63\64\3\2\2\2\64\65\3\2\2\2\65\66\7\27\2\2\66")
+        buf.write("\t\3\2\2\2\678\5\16\b\28<\5\34\17\29;\5\20\t\2:9\3\2\2")
+        buf.write("\2;>\3\2\2\2<:\3\2\2\2<=\3\2\2\2=\13\3\2\2\2><\3\2\2\2")
+        buf.write("?F\5\34\17\2@B\7\b\2\2A@\3\2\2\2AB\3\2\2\2BC\3\2\2\2C")
+        buf.write("E\5\20\t\2DA\3\2\2\2EH\3\2\2\2FD\3\2\2\2FG\3\2\2\2G\r")
+        buf.write("\3\2\2\2HF\3\2\2\2IJ\t\2\2\2J\17\3\2\2\2KM\5\22\n\2LN")
+        buf.write("\5\24\13\2ML\3\2\2\2MN\3\2\2\2N\21\3\2\2\2OW\7\20\2\2")
+        buf.write("PW\7\21\2\2QW\7\17\2\2RW\7\22\2\2SW\7\23\2\2TW\7\24\2")
+        buf.write("\2UW\5\34\17\2VO\3\2\2\2VP\3\2\2\2VQ\3\2\2\2VR\3\2\2\2")
+        buf.write("VS\3\2\2\2VT\3\2\2\2VU\3\2\2\2W\23\3\2\2\2XY\7\25\2\2")
+        buf.write("Y^\5\26\f\2Z[\7\26\2\2[]\5\26\f\2\\Z\3\2\2\2]`\3\2\2\2")
+        buf.write("^\\\3\2\2\2^_\3\2\2\2_b\3\2\2\2`^\3\2\2\2ac\7\26\2\2b")
+        buf.write("a\3\2\2\2bc\3\2\2\2cd\3\2\2\2de\7\25\2\2e\25\3\2\2\2f")
+        buf.write("h\5\34\17\2gf\3\2\2\2gh\3\2\2\2hj\3\2\2\2ik\7\n\2\2ji")
+        buf.write("\3\2\2\2jk\3\2\2\2kl\3\2\2\2ln\5\30\r\2mo\7\r\2\2nm\3")
+        buf.write("\2\2\2no\3\2\2\2o\27\3\2\2\2pr\t\3\2\2qp\3\2\2\2qr\3\2")
+        buf.write("\2\2rs\3\2\2\2st\7\16\2\2t{\5\32\16\2uw\5\34\17\2vu\3")
+        buf.write("\2\2\2wx\3\2\2\2xv\3\2\2\2xy\3\2\2\2y{\3\2\2\2zq\3\2\2")
+        buf.write("\2zv\3\2\2\2{\31\3\2\2\2|~\5\34\17\2}|\3\2\2\2~\177\3")
+        buf.write("\2\2\2\177}\3\2\2\2\177\u0080\3\2\2\2\u0080\33\3\2\2\2")
+        buf.write("\u0081\u0082\t\4\2\2\u0082\35\3\2\2\2\24!*\60\63<AFMV")
+        buf.write("^bgjnqxz\177")
         return buf.getvalue()
 
 
@@ -72,33 +71,32 @@ class TALParser ( Parser ):
     literalNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "'</'", "'<'", 
                      "'>'", "'tal:'", "'metal:'", "'not:'", "'python:'", 
                      "'string:'", "'|nothing'", "'context'", "'content='", 
-                     "'define='", "'condition='", "'define-macro='", "'use-macro='", 
-                     "'\"'", "';'" ]
+                     "'define='", "'condition='", "'repeat='", "'define-macro='", 
+                     "'use-macro='", "'\"'", "';'" ]
 
     symbolicNames = [ "<INVALID>", "WHITESPACE", "BLOCK_COMMENT", "TAG_OPEN_SLASH", 
                       "TAG_OPEN", "TAG_CLOSE", "TAL_TAG_KEY", "METAL_TAG_KEY", 
                       "NOT_KEY", "PYTHON_KEY", "STRING_KEY", "NOTHING_EXPR", 
                       "ZOPE_KEY", "ATTR_CONTENT", "ATTR_DEFINE", "ATTR_CONDITION", 
-                      "ATTR_DEFINE_MACRO", "ATTR_USE_MACRO", "DQUOTA", "SEMICOLON", 
-                      "IDENTIFIER", "UNEXPECTED_CHAR" ]
+                      "ATTR_REPEAT", "ATTR_DEFINE_MACRO", "ATTR_USE_MACRO", 
+                      "DQUOTA", "SEMICOLON", "IDENTIFIER", "UNEXPECTED_CHAR" ]
 
     RULE_parse = 0
     RULE_stmt = 1
-    RULE_tag = 2
-    RULE_open_tag = 3
-    RULE_close_tag = 4
-    RULE_tal_tag = 5
-    RULE_other_tag = 6
-    RULE_tag_specifier = 7
-    RULE_tag_attr = 8
-    RULE_tag_attr_key = 9
-    RULE_tag_attr_value = 10
-    RULE_tag_attr_value_def = 11
-    RULE_tag_attr_expr = 12
-    RULE_function_ref = 13
-    RULE_identifier = 14
+    RULE_open_tag = 2
+    RULE_close_tag = 3
+    RULE_tal_tag = 4
+    RULE_other_tag = 5
+    RULE_tag_specifier = 6
+    RULE_tag_attr = 7
+    RULE_tag_attr_key = 8
+    RULE_tag_attr_value = 9
+    RULE_tag_attr_value_def = 10
+    RULE_tag_attr_expr = 11
+    RULE_function_ref = 12
+    RULE_identifier = 13
 
-    ruleNames =  [ "parse", "stmt", "tag", "open_tag", "close_tag", "tal_tag", 
+    ruleNames =  [ "parse", "stmt", "open_tag", "close_tag", "tal_tag", 
                    "other_tag", "tag_specifier", "tag_attr", "tag_attr_key", 
                    "tag_attr_value", "tag_attr_value_def", "tag_attr_expr", 
                    "function_ref", "identifier" ]
@@ -119,12 +117,13 @@ class TALParser ( Parser ):
     ATTR_CONTENT=13
     ATTR_DEFINE=14
     ATTR_CONDITION=15
-    ATTR_DEFINE_MACRO=16
-    ATTR_USE_MACRO=17
-    DQUOTA=18
-    SEMICOLON=19
-    IDENTIFIER=20
-    UNEXPECTED_CHAR=21
+    ATTR_REPEAT=16
+    ATTR_DEFINE_MACRO=17
+    ATTR_USE_MACRO=18
+    DQUOTA=19
+    SEMICOLON=20
+    IDENTIFIER=21
+    UNEXPECTED_CHAR=22
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -172,17 +171,17 @@ class TALParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 33
+            self.state = 31
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==TALParser.TAG_OPEN_SLASH or _la==TALParser.TAG_OPEN:
-                self.state = 30
+                self.state = 28
                 self.stmt()
-                self.state = 35
+                self.state = 33
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 36
+            self.state = 34
             self.match(TALParser.EOF)
         except RecognitionException as re:
             localctx.exception = re
@@ -194,47 +193,6 @@ class TALParser ( Parser ):
 
 
     class StmtContext(ParserRuleContext):
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def tag(self):
-            return self.getTypedRuleContext(TALParser.TagContext,0)
-
-
-        def getRuleIndex(self):
-            return TALParser.RULE_stmt
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterStmt" ):
-                listener.enterStmt(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitStmt" ):
-                listener.exitStmt(self)
-
-
-
-
-    def stmt(self):
-
-        localctx = TALParser.StmtContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 2, self.RULE_stmt)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 38
-            self.tag()
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class TagContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -258,44 +216,44 @@ class TALParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return TALParser.RULE_tag
+            return TALParser.RULE_stmt
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTag" ):
-                listener.enterTag(self)
+            if hasattr( listener, "enterStmt" ):
+                listener.enterStmt(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTag" ):
-                listener.exitTag(self)
+            if hasattr( listener, "exitStmt" ):
+                listener.exitStmt(self)
 
 
 
 
-    def tag(self):
+    def stmt(self):
 
-        localctx = TALParser.TagContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 4, self.RULE_tag)
+        localctx = TALParser.StmtContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 2, self.RULE_stmt)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 44
+            self.state = 40
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [TALParser.TAG_OPEN_SLASH]:
-                self.state = 40
+                self.state = 36
                 self.match(TALParser.TAG_OPEN_SLASH)
-                self.state = 41
+                self.state = 37
                 self.close_tag()
                 pass
             elif token in [TALParser.TAG_OPEN]:
-                self.state = 42
+                self.state = 38
                 self.match(TALParser.TAG_OPEN)
-                self.state = 43
+                self.state = 39
                 self.open_tag()
                 pass
             else:
                 raise NoViableAltException(self)
 
-            self.state = 46
+            self.state = 42
             self.match(TALParser.TAG_CLOSE)
         except RecognitionException as re:
             localctx.exception = re
@@ -337,19 +295,19 @@ class TALParser ( Parser ):
     def open_tag(self):
 
         localctx = TALParser.Open_tagContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 6, self.RULE_open_tag)
+        self.enterRule(localctx, 4, self.RULE_open_tag)
         try:
-            self.state = 50
+            self.state = 46
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [TALParser.IDENTIFIER, TALParser.UNEXPECTED_CHAR]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 48
+                self.state = 44
                 self.other_tag()
                 pass
             elif token in [TALParser.TAL_TAG_KEY, TALParser.METAL_TAG_KEY]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 49
+                self.state = 45
                 self.tal_tag()
                 pass
             else:
@@ -394,19 +352,19 @@ class TALParser ( Parser ):
     def close_tag(self):
 
         localctx = TALParser.Close_tagContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 8, self.RULE_close_tag)
+        self.enterRule(localctx, 6, self.RULE_close_tag)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 53
+            self.state = 49
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==TALParser.TAL_TAG_KEY or _la==TALParser.METAL_TAG_KEY:
-                self.state = 52
+                self.state = 48
                 self.tag_specifier()
 
 
-            self.state = 55
+            self.state = 51
             self.match(TALParser.IDENTIFIER)
         except RecognitionException as re:
             localctx.exception = re
@@ -455,21 +413,21 @@ class TALParser ( Parser ):
     def tal_tag(self):
 
         localctx = TALParser.Tal_tagContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 10, self.RULE_tal_tag)
+        self.enterRule(localctx, 8, self.RULE_tal_tag)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 57
+            self.state = 53
             self.tag_specifier()
-            self.state = 58
+            self.state = 54
             self.identifier()
-            self.state = 62
+            self.state = 58
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << TALParser.ATTR_CONTENT) | (1 << TALParser.ATTR_DEFINE) | (1 << TALParser.ATTR_CONDITION) | (1 << TALParser.ATTR_DEFINE_MACRO) | (1 << TALParser.ATTR_USE_MACRO) | (1 << TALParser.IDENTIFIER) | (1 << TALParser.UNEXPECTED_CHAR))) != 0):
-                self.state = 59
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << TALParser.ATTR_CONTENT) | (1 << TALParser.ATTR_DEFINE) | (1 << TALParser.ATTR_CONDITION) | (1 << TALParser.ATTR_REPEAT) | (1 << TALParser.ATTR_DEFINE_MACRO) | (1 << TALParser.ATTR_USE_MACRO) | (1 << TALParser.IDENTIFIER) | (1 << TALParser.UNEXPECTED_CHAR))) != 0):
+                self.state = 55
                 self.tag_attr()
-                self.state = 64
+                self.state = 60
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -522,27 +480,27 @@ class TALParser ( Parser ):
     def other_tag(self):
 
         localctx = TALParser.Other_tagContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 12, self.RULE_other_tag)
+        self.enterRule(localctx, 10, self.RULE_other_tag)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 65
+            self.state = 61
             self.identifier()
-            self.state = 72
+            self.state = 68
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << TALParser.TAL_TAG_KEY) | (1 << TALParser.ATTR_CONTENT) | (1 << TALParser.ATTR_DEFINE) | (1 << TALParser.ATTR_CONDITION) | (1 << TALParser.ATTR_DEFINE_MACRO) | (1 << TALParser.ATTR_USE_MACRO) | (1 << TALParser.IDENTIFIER) | (1 << TALParser.UNEXPECTED_CHAR))) != 0):
-                self.state = 67
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << TALParser.TAL_TAG_KEY) | (1 << TALParser.ATTR_CONTENT) | (1 << TALParser.ATTR_DEFINE) | (1 << TALParser.ATTR_CONDITION) | (1 << TALParser.ATTR_REPEAT) | (1 << TALParser.ATTR_DEFINE_MACRO) | (1 << TALParser.ATTR_USE_MACRO) | (1 << TALParser.IDENTIFIER) | (1 << TALParser.UNEXPECTED_CHAR))) != 0):
+                self.state = 63
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==TALParser.TAL_TAG_KEY:
-                    self.state = 66
+                    self.state = 62
                     self.match(TALParser.TAL_TAG_KEY)
 
 
-                self.state = 69
+                self.state = 65
                 self.tag_attr()
-                self.state = 74
+                self.state = 70
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -584,11 +542,11 @@ class TALParser ( Parser ):
     def tag_specifier(self):
 
         localctx = TALParser.Tag_specifierContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 14, self.RULE_tag_specifier)
+        self.enterRule(localctx, 12, self.RULE_tag_specifier)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 75
+            self.state = 71
             _la = self._input.LA(1)
             if not(_la==TALParser.TAL_TAG_KEY or _la==TALParser.METAL_TAG_KEY):
                 self._errHandler.recoverInline(self)
@@ -635,17 +593,17 @@ class TALParser ( Parser ):
     def tag_attr(self):
 
         localctx = TALParser.Tag_attrContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 16, self.RULE_tag_attr)
+        self.enterRule(localctx, 14, self.RULE_tag_attr)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 77
+            self.state = 73
             self.tag_attr_key()
-            self.state = 79
+            self.state = 75
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==TALParser.DQUOTA:
-                self.state = 78
+                self.state = 74
                 self.tag_attr_value()
 
 
@@ -672,6 +630,9 @@ class TALParser ( Parser ):
 
         def ATTR_CONTENT(self):
             return self.getToken(TALParser.ATTR_CONTENT, 0)
+
+        def ATTR_REPEAT(self):
+            return self.getToken(TALParser.ATTR_REPEAT, 0)
 
         def ATTR_DEFINE_MACRO(self):
             return self.getToken(TALParser.ATTR_DEFINE_MACRO, 0)
@@ -700,39 +661,44 @@ class TALParser ( Parser ):
     def tag_attr_key(self):
 
         localctx = TALParser.Tag_attr_keyContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 18, self.RULE_tag_attr_key)
+        self.enterRule(localctx, 16, self.RULE_tag_attr_key)
         try:
-            self.state = 87
+            self.state = 84
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [TALParser.ATTR_DEFINE]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 81
+                self.state = 77
                 self.match(TALParser.ATTR_DEFINE)
                 pass
             elif token in [TALParser.ATTR_CONDITION]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 82
+                self.state = 78
                 self.match(TALParser.ATTR_CONDITION)
                 pass
             elif token in [TALParser.ATTR_CONTENT]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 83
+                self.state = 79
                 self.match(TALParser.ATTR_CONTENT)
                 pass
-            elif token in [TALParser.ATTR_DEFINE_MACRO]:
+            elif token in [TALParser.ATTR_REPEAT]:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 84
+                self.state = 80
+                self.match(TALParser.ATTR_REPEAT)
+                pass
+            elif token in [TALParser.ATTR_DEFINE_MACRO]:
+                self.enterOuterAlt(localctx, 5)
+                self.state = 81
                 self.match(TALParser.ATTR_DEFINE_MACRO)
                 pass
             elif token in [TALParser.ATTR_USE_MACRO]:
-                self.enterOuterAlt(localctx, 5)
-                self.state = 85
+                self.enterOuterAlt(localctx, 6)
+                self.state = 82
                 self.match(TALParser.ATTR_USE_MACRO)
                 pass
             elif token in [TALParser.IDENTIFIER, TALParser.UNEXPECTED_CHAR]:
-                self.enterOuterAlt(localctx, 6)
-                self.state = 86
+                self.enterOuterAlt(localctx, 7)
+                self.state = 83
                 self.identifier()
                 pass
             else:
@@ -789,36 +755,36 @@ class TALParser ( Parser ):
     def tag_attr_value(self):
 
         localctx = TALParser.Tag_attr_valueContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 20, self.RULE_tag_attr_value)
+        self.enterRule(localctx, 18, self.RULE_tag_attr_value)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 89
+            self.state = 86
             self.match(TALParser.DQUOTA)
-            self.state = 90
+            self.state = 87
             self.tag_attr_value_def()
-            self.state = 95
+            self.state = 92
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,9,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
-                    self.state = 91
+                    self.state = 88
                     self.match(TALParser.SEMICOLON)
-                    self.state = 92
+                    self.state = 89
                     self.tag_attr_value_def() 
-                self.state = 97
+                self.state = 94
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,9,self._ctx)
 
-            self.state = 99
+            self.state = 96
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==TALParser.SEMICOLON:
-                self.state = 98
+                self.state = 95
                 self.match(TALParser.SEMICOLON)
 
 
-            self.state = 101
+            self.state = 98
             self.match(TALParser.DQUOTA)
         except RecognitionException as re:
             localctx.exception = re
@@ -866,33 +832,33 @@ class TALParser ( Parser ):
     def tag_attr_value_def(self):
 
         localctx = TALParser.Tag_attr_value_defContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 22, self.RULE_tag_attr_value_def)
+        self.enterRule(localctx, 20, self.RULE_tag_attr_value_def)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 104
+            self.state = 101
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,11,self._ctx)
             if la_ == 1:
-                self.state = 103
+                self.state = 100
                 self.identifier()
 
 
-            self.state = 107
+            self.state = 104
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==TALParser.NOT_KEY:
-                self.state = 106
+                self.state = 103
                 self.match(TALParser.NOT_KEY)
 
 
-            self.state = 109
+            self.state = 106
             self.tag_attr_expr()
-            self.state = 111
+            self.state = 108
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==TALParser.NOTHING_EXPR:
-                self.state = 110
+                self.state = 107
                 self.match(TALParser.NOTHING_EXPR)
 
 
@@ -948,19 +914,19 @@ class TALParser ( Parser ):
     def tag_attr_expr(self):
 
         localctx = TALParser.Tag_attr_exprContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 24, self.RULE_tag_attr_expr)
+        self.enterRule(localctx, 22, self.RULE_tag_attr_expr)
         self._la = 0 # Token type
         try:
-            self.state = 123
+            self.state = 120
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [TALParser.PYTHON_KEY, TALParser.STRING_KEY, TALParser.ZOPE_KEY]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 114
+                self.state = 111
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==TALParser.PYTHON_KEY or _la==TALParser.STRING_KEY:
-                    self.state = 113
+                    self.state = 110
                     _la = self._input.LA(1)
                     if not(_la==TALParser.PYTHON_KEY or _la==TALParser.STRING_KEY):
                         self._errHandler.recoverInline(self)
@@ -969,20 +935,20 @@ class TALParser ( Parser ):
                         self.consume()
 
 
-                self.state = 116
+                self.state = 113
                 self.match(TALParser.ZOPE_KEY)
-                self.state = 117
+                self.state = 114
                 self.function_ref()
                 pass
             elif token in [TALParser.IDENTIFIER, TALParser.UNEXPECTED_CHAR]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 119 
+                self.state = 116 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while True:
-                    self.state = 118
+                    self.state = 115
                     self.identifier()
-                    self.state = 121 
+                    self.state = 118 
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     if not (_la==TALParser.IDENTIFIER or _la==TALParser.UNEXPECTED_CHAR):
@@ -1031,17 +997,17 @@ class TALParser ( Parser ):
     def function_ref(self):
 
         localctx = TALParser.Function_refContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 26, self.RULE_function_ref)
+        self.enterRule(localctx, 24, self.RULE_function_ref)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 126 
+            self.state = 123 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
-                self.state = 125
+                self.state = 122
                 self.identifier()
-                self.state = 128 
+                self.state = 125 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if not (_la==TALParser.IDENTIFIER or _la==TALParser.UNEXPECTED_CHAR):
@@ -1085,11 +1051,11 @@ class TALParser ( Parser ):
     def identifier(self):
 
         localctx = TALParser.IdentifierContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 28, self.RULE_identifier)
+        self.enterRule(localctx, 26, self.RULE_identifier)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 130
+            self.state = 127
             _la = self._input.LA(1)
             if not(_la==TALParser.IDENTIFIER or _la==TALParser.UNEXPECTED_CHAR):
                 self._errHandler.recoverInline(self)

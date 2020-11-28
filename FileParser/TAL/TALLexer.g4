@@ -21,6 +21,7 @@ ZOPE_KEY             : 'context';
 ATTR_CONTENT        : 'content=';
 ATTR_DEFINE         : 'define=';
 ATTR_CONDITION      : 'condition=';
+ATTR_REPEAT         : 'repeat=';
 ATTR_DEFINE_MACRO   : 'define-macro=';
 ATTR_USE_MACRO      : 'use-macro=';
 

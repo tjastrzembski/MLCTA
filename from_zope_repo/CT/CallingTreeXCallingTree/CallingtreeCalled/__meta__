@@ -1,0 +1,19 @@
+[
+    ('perms', [
+        ('zDB_Delete_Records', False, []),
+        ('zDB_Insert_Records', False, []),
+        ('zDB_Update_Records', False, []),
+        ]),
+    ('props', [
+        [('id', 'columns'), ('type', 'tokens'), ('value', ('path', 'filename', 'callingtreetype_id', 'fileparsed', 'scanned', 'filemodded', 'functionlist'))],
+        [('id', 'lc_controls'), ('type', 'boolean'), ('value', False)],
+        [('id', 'modinfo'), ('type', 'boolean'), ('value', False)],
+        [('id', 'nav_hidden'), ('type', 'boolean'), ('value', True)],
+        [('id', 'show_id'), ('type', 'boolean'), ('value', True)],
+        [('id', 'sort_colset_default'), ('type', 'tokens'), ('value', ('callingtree_id',))],
+        [('id', 'subcolumn'), ('type', 'string'), ('value', 'callingtreexcallingtree_id')],
+        [('id', 'table'), ('type', 'string'), ('value', 'callingtree')],
+        ]),
+    ('title', 'Aufgerufender Knoten'),
+    ('type', 'Folder'),
+]

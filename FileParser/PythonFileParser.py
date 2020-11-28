@@ -27,7 +27,7 @@ class FunctionPathListener(Python3Listener):
     
         path_str = ''.join([t.getText() for t in fct_path])
         fct_name = re.findall(r'(?:\.)?([^\"\(]+)(?:\()?', path_str)
-        if len(fct_name) > 1:
+        if len(fct_name) > 0:
             fmt_fct_name = fct_name[0].replace('.','/')
             self.parsed_fct.add(fmt_fct_name)
     

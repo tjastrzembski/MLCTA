@@ -62,6 +62,15 @@ class DTMLParserListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by DTMLParser#dtml_tag_expr_keyword.
+    def enterDtml_tag_expr_keyword(self, ctx:DTMLParser.Dtml_tag_expr_keywordContext):
+        pass
+
+    # Exit a parse tree produced by DTMLParser#dtml_tag_expr_keyword.
+    def exitDtml_tag_expr_keyword(self, ctx:DTMLParser.Dtml_tag_expr_keywordContext):
+        pass
+
+
     # Enter a parse tree produced by DTMLParser#dtml_tag_expr_val.
     def enterDtml_tag_expr_val(self, ctx:DTMLParser.Dtml_tag_expr_valContext):
         pass

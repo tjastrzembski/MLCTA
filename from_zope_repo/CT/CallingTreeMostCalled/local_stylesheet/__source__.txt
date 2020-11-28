@@ -1,0 +1,9 @@
+<dtml-call expr="REQUEST.RESPONSE.setHeader('Content-Type', 'text/css')">
+<dtml-with stylesheet_vars mapping>
+
+/* Local settings */
+div.num-entries {
+    padding-bottom: 5px;
+}
+
+</dtml-with>

@@ -1,0 +1,16 @@
+[
+    ('perms', [
+        ('zDB_Delete_Records', False, []),
+        ('zDB_Insert_Records', False, []),
+        ('zDB_Update_Records', False, []),
+        ]),
+    ('props', [
+        [('id', 'action_buttons'), ('type', 'tokens'), ('value', ('go_to_zope_object',))],
+        [('id', 'columns'), ('type', 'tokens'), ('value', ('path', 'filename', 'callingtreetype_id', 'fileparsed', 'filemodded', 'functionlist'))],
+        [('id', 'lc_controls'), ('type', 'boolean'), ('value', False)],
+        [('id', 'modinfo'), ('type', 'boolean'), ('value', False)],
+        [('id', 'table'), ('type', 'string'), ('value', 'callingtree')],
+        ]),
+    ('title', 'Zope-Objekte ohne Aufrufreferenzen'),
+    ('type', 'Folder'),
+]

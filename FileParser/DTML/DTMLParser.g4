@@ -21,11 +21,14 @@ dtml_tag_specifier
 dtml_tag_attr
     : dtml_tag_var
     | dtml_tag_expr_stmt
-    | DTML_TAG_TYPE STRING_LITERAL
     ;
 
 dtml_tag_expr_stmt
-    : DTML_TAG_EXPR dtml_tag_expr_val
+    : dtml_tag_expr_keyword dtml_tag_expr_val
+    ;
+
+dtml_tag_expr_keyword
+    : identifier EQ
     ;
     
 dtml_tag_expr_val
