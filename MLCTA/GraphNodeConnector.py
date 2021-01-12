@@ -1,6 +1,7 @@
 from io import BytesIO  # for fast response storage
 from os import path
 import pycurl
+from MLCTA import MODULE_PATH
 
 # extract class from perfact-assignd
 class ResponseWriter:
@@ -73,7 +74,7 @@ class GraphNodeConnector:
         self.queue = []
         
         res = self.psql.exec_query(
-            './PSQL/callingtree_functionlist_get_q.sql'
+            MODULE_PATH + '/PSQL/callingtree_functionlist_get_q.sql'
             )
         
         for entry in res:
@@ -93,7 +94,7 @@ class GraphNodeConnector:
             )
         # check, if acquisition already processed
         acquisition_check_res = self.psql.exec_query(
-                './PSQL/callingtree_acquisition_check_q.sql',
+                MODULE_PATH + '/PSQL/callingtree_acquisition_check_q.sql',
                 caller_id=node['callingtree_id'],
                 acquisition_path=acquisition_path
         )
@@ -112,7 +113,7 @@ class GraphNodeConnector:
                 full_acquisition
             )
             child_node_res = self.psql.exec_query(
-                    './PSQL/callingtree_get_q2.sql',
+                    MODULE_PATH + '/PSQL/callingtree_get_q2.sql',
                     path=real_physical_path,
                     filename=filename
             )
@@ -130,7 +131,7 @@ class GraphNodeConnector:
 
             # check if edge is already existent
             edge_res = self.psql.exec_query(
-                './PSQL/callingtreexcallingtree_get_q.sql',
+                MODULE_PATH + '/PSQL/callingtreexcallingtree_get_q.sql',
                 caller_id=node['callingtree_id'],
                 called_id=child_node['callingtree_id'],
             )
@@ -148,7 +149,7 @@ class GraphNodeConnector:
             self.queue.append((child_node, full_acquisition_path))
 
             self.psql.exec_query(
-                './PSQL/callingtreexcallingtree_ins_q.sql',
+                MODULE_PATH + '/PSQL/callingtreexcallingtree_ins_q.sql',
                 caller_id=node['callingtree_id'],
                 called_id=child_node['callingtree_id'],
                 acquisition_path=acquisition_list

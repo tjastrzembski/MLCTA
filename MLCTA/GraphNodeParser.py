@@ -1,5 +1,6 @@
 from os import path
-from FileParser.FileParserFactory import FileParserFactory
+from MLCTA import MODULE_PATH
+from MLCTA.FileParser.FileParserFactory import FileParserFactory
 
 class GraphNodeParser:
     def __init__(
@@ -10,7 +11,7 @@ class GraphNodeParser:
         self.repo_path = repo_path 
         self.psql = psql_handle
         self.unparsed_nodes = self.psql.exec_query(
-            './PSQL/callingtree_unparsed_get_q.sql'
+            MODULE_PATH + '/PSQL/callingtree_unparsed_get_q.sql'
             )
         
     def parse_Nodes(self) -> None:
@@ -27,7 +28,7 @@ class GraphNodeParser:
             )
             if response == 1:
                 self.psql.exec_query(
-                    './PSQL/callingtree_parsedfile_set_q.sql',
+                    MODULE_PATH + '/PSQL/callingtree_parsedfile_set_q.sql',
                     modtime=entry['modtime'],
                     functionlist=list(function_list),
                     path=entry['path'],

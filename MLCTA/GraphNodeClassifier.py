@@ -1,6 +1,8 @@
 from os import walk, path, listdir
 import re
 
+from MLCTA import MODULE_PATH
+
 class GraphNodeClassifier:
     def __init__(
         self,
@@ -9,7 +11,9 @@ class GraphNodeClassifier:
         psql_handle
     ):
         self.psql = psql_handle
-        res = self.psql.exec_query('./PSQL/callingtreetype_get_q.sql')
+        res = self.psql.exec_query(
+            MODULE_PATH + '/PSQL/callingtreetype_get_q.sql'
+        )
         if len(res) > 0:
             self.supported_types = res[0]['supported_types']
 
@@ -18,7 +22,9 @@ class GraphNodeClassifier:
 
     def repo_check(self) -> None:
         used_path = path.join(self.repo_path, self.sub_path)
-        self.psql.exec_query('./PSQL/callingtree_scanflag_reset_q.sql')
+        self.psql.exec_query(
+            MODULE_PATH + '/PSQL/callingtree_scanflag_reset_q.sql'
+        )
         
         for root, dirs, files in walk(used_path):
             # functions/queries are actually folders having meta and source file
@@ -93,7 +99,7 @@ class GraphNodeClassifier:
             fullpathfile = path.join(fullpath, filename)
             modtime = path.getmtime(fullpathfile)
             self.psql.exec_query(
-                './PSQL/callingtree_set_q.sql',
+                MODULE_PATH + '/PSQL/callingtree_set_q.sql',
                 path=relative_path,
                 filename=function_name,
                 itype=interpretation_type,
@@ -102,6 +108,6 @@ class GraphNodeClassifier:
 
     def callingtree_cleanup(self) -> None:
         self.psql.exec_query(
-            './PSQL/callingtree_cleanup_q.sql',
+            MODULE_PATH + '/PSQL/callingtree_cleanup_q.sql',
             path=f'^{self.sub_path}'
-            )
+        )

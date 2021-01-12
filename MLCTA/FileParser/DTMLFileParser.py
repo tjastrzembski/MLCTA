@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-from FileParser.FileParser import FileParser
+from MLCTA.FileParser.FileParser import FileParser
 
 import re
 from os import path
 from antlr4 import *
 
-from FileParser.DTML.DTMLLexer import DTMLLexer
-from FileParser.DTML.DTMLParser import DTMLParser
-from FileParser.DTML.DTMLParserListener import DTMLParserListener
+from MLCTA.FileParser.DTML.DTMLLexer import DTMLLexer
+from MLCTA.FileParser.DTML.DTMLParser import DTMLParser
+from MLCTA.FileParser.DTML.DTMLParserListener import DTMLParserListener
 
 
 class FunctionPathListener(DTMLParserListener):
