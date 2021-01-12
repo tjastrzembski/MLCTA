@@ -1,7 +1,7 @@
 from io import BytesIO  # for fast response storage
 from os import path
 import pycurl
-from MLCTA import MODULE_PATH
+from MLCGB import MODULE_PATH
 
 # extract class from perfact-assignd
 class ResponseWriter:

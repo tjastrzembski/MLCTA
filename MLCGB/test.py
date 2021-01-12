@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 
 # own Files
-from PostgreSQLQueryHandle import PostgreSQLQueryHandle
-from GraphNodeClassifier import GraphNodeClassifier
-from GraphNodeParser import GraphNodeParser
-from GraphNodeConnector import GraphNodeConnector
+from MLCGB import MODULE_PATH
+from MLCGB.PostgreSQLQueryHandle import PostgreSQLQueryHandle
+from MLCGB.GraphNodeClassifier import GraphNodeClassifier
+from MLCGB.GraphNodeParser import GraphNodeParser
+from MLCGB.GraphNodeConnector import GraphNodeConnector
 
 from psycopg2 import OperationalError, errors
 
@@ -25,28 +26,28 @@ def test_psql_handle():
         cust_psql = PostgreSQLQueryHandle(
             dbconn_args=dbconn_args
         )
-        res = cust_psql.exec_query('./PSQL/tests/check_connection_q.sql')
+        res = cust_psql.exec_query(MODULE_PATH + '/PSQL/tests/check_connection_q.sql')
         assert len(res) > 0
     except OperationalError as err:
         assert False, err
 
 def test_psql_table_callingtree():
     try:
-        res = psql.exec_query('./PSQL/tests/callingtree_get_q.sql')
+        res = psql.exec_query(MODULE_PATH + '/PSQL/tests/callingtree_get_q.sql')
         assert len(res) > 0
     except (errors.UndefinedTable, OperationalError) as err:
         assert False, err
 
 def test_psql_table_callingtreetype():
     try:
-        res = psql.exec_query('./PSQL/tests/callingtreetype_get_q.sql')
+        res = psql.exec_query(MODULE_PATH + '/PSQL/tests/callingtreetype_get_q.sql')
         assert len(res) > 0
     except (errors.UndefinedTable, OperationalError) as err:
         assert False, err
 
 def test_psql_table_callingtreexcallingtree():
     try:
-        res = psql.exec_query('./PSQL/tests/callingtreexcallingtree_get_q.sql')
+        res = psql.exec_query(MODULE_PATH + '/PSQL/tests/callingtreexcallingtree_get_q.sql')
         assert len(res) > 0
     except (errors.UndefinedTable, OperationalError) as err:
         assert False, err

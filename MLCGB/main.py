@@ -2,10 +2,10 @@
 from time import time
 
 # own Files
-from MLCTA.PostgreSQLQueryHandle import PostgreSQLQueryHandle
-from MLCTA.GraphNodeClassifier import GraphNodeClassifier
-from MLCTA.GraphNodeParser import GraphNodeParser
-from MLCTA.GraphNodeConnector import GraphNodeConnector
+from MLCGB.PostgreSQLQueryHandle import PostgreSQLQueryHandle
+from MLCGB.GraphNodeClassifier import GraphNodeClassifier
+from MLCGB.GraphNodeParser import GraphNodeParser
+from MLCGB.GraphNodeConnector import GraphNodeConnector
 
 # For HTTP Requests regarding physical path
 zope_url = 'http://localhost:9081'

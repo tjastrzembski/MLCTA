@@ -1,6 +1,6 @@
 from os import path
-from MLCTA import MODULE_PATH
-from MLCTA.FileParser.FileParserFactory import FileParserFactory
+from MLCGB import MODULE_PATH
+from MLCGB.FileParser.FileParserFactory import FileParserFactory
 
 class GraphNodeParser:
     def __init__(

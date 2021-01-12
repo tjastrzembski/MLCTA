@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-from MLCTA.FileParser.FileParser import FileParser
+from MLCGB.FileParser.FileParser import FileParser
 
 import re
 from os import path
 from antlr4 import *
 
-from MLCTA.FileParser.TAL.TALLexer import TALLexer
-from MLCTA.FileParser.TAL.TALParser import TALParser
-from MLCTA.FileParser.TAL.TALParserListener import TALParserListener
+from MLCGB.FileParser.TAL.TALLexer import TALLexer
+from MLCGB.FileParser.TAL.TALParser import TALParser
+from MLCGB.FileParser.TAL.TALParserListener import TALParserListener
 
 
 class FunctionPathListener(TALParserListener):

@@ -1,7 +1,7 @@
 from os import walk, path, listdir
 import re
 
-from MLCTA import MODULE_PATH
+from MLCGB import MODULE_PATH
 
 class GraphNodeClassifier:
     def __init__(

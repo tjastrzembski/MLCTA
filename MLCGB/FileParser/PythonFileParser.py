@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-from MLCTA.FileParser.FileParser import FileParser
+from MLCGB.FileParser.FileParser import FileParser
 
 import re
 from os import path
 from antlr4 import *
 
-from MLCTA.FileParser.Python.Python3Lexer import Python3Lexer
-from MLCTA.FileParser.Python.Python3Parser import Python3Parser
-from MLCTA.FileParser.Python.Python3Listener import Python3Listener
+from MLCGB.FileParser.Python.Python3Lexer import Python3Lexer
+from MLCGB.FileParser.Python.Python3Parser import Python3Parser
+from MLCGB.FileParser.Python.Python3Listener import Python3Listener
 
 
 class FunctionPathListener(Python3Listener):

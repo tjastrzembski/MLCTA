@@ -1,7 +1,7 @@
-from MLCTA.FileParser import FileParser
-from MLCTA.FileParser.PythonFileParser import PythonFileParser
-from MLCTA.FileParser.DTMLFileParser import DTMLFileParser
-from MLCTA.FileParser.TALFileParser import TALFileParser
+from MLCGB.FileParser import FileParser
+from MLCGB.FileParser.PythonFileParser import PythonFileParser
+from MLCGB.FileParser.DTMLFileParser import DTMLFileParser
+from MLCGB.FileParser.TALFileParser import TALFileParser
 
 #from JavaScriptFileParser import JavaScriptFileParser
 
